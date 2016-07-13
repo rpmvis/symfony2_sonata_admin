@@ -1,0 +1,74 @@
+AppBundle\Entity\Werknemer:
+    type: entity
+    table: Werknemer
+    indexes:
+        Klant_ID:
+            columns:
+                - Klant_ID
+    id:
+        id:
+            type: bigint
+            nullable: false
+            unsigned: false
+            id: true
+            column: ID
+            generator:
+                strategy: IDENTITY
+    fields:
+        naam:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            column: Naam
+        huisAdres:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            column: Huis_adres
+        huisPostcode:
+            type: string
+            nullable: false
+            length: 6
+            fixed: false
+            column: Huis_postcode
+        huisPlaats:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            column: Huis_plaats
+        huisAdresIsBezoekAdres:
+            type: boolean
+            nullable: false
+            column: Huis_adres_is_bezoek_adres
+        bezoekAdres:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            column: Bezoek_adres
+        bezoekPostcode:
+            type: string
+            nullable: true
+            length: 6
+            fixed: false
+            column: Bezoek_postcode
+        bezoekPlaats:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            column: Bezoek_plaats
+    manyToOne:
+        klant:
+            targetEntity: Klant
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                Klant_ID:
+                    referencedColumnName: ID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

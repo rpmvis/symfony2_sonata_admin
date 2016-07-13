@@ -1,0 +1,62 @@
+AppBundle\Entity\Controlegespreksverslag:
+    type: entity
+    table: Controlegespreksverslag
+    indexes:
+        Controle_ID:
+            columns:
+                - Controle_ID
+        Controle_ID_2:
+            columns:
+                - Controle_ID
+    id:
+        id:
+            type: bigint
+            nullable: false
+            unsigned: false
+            id: true
+            column: ID
+            generator:
+                strategy: IDENTITY
+    fields:
+        verzuimGemeldBij:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            column: Verzuim_gemeld_bij
+        goedContactMetWerkgever:
+            type: boolean
+            nullable: false
+            column: Goed_contact_met_werkgever
+        redenVerzuimMedisch:
+            type: boolean
+            nullable: false
+            column: Reden_verzuim_medisch_
+        geheelOfGedeeltelijkNietKunnenWerken:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            column: Geheel_of_gedeeltelijk_niet_kunnen_werken
+        verwachtVerzuimInDagen:
+            type: integer
+            nullable: false
+            unsigned: false
+            column: Verwacht_verzuim_in_dagen
+        heeftContactMetEenBehandelaar:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            column: Heeft_contact_met_een_behandelaar_
+    manyToOne:
+        controle:
+            targetEntity: Controle
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                Controle_ID:
+                    referencedColumnName: ID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

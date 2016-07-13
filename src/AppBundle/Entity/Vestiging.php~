@@ -1,0 +1,141 @@
+<?php
+
+namespace AppBundle\Entity;
+
+/**
+ * Vestiging
+ */
+class Vestiging
+{
+    /**
+     * @var integer
+     */
+    private $bedrijfId;
+
+    /**
+     * @var string
+     */
+    private $adres;
+
+    /**
+     * @var string
+     */
+    private $postcode;
+
+    /**
+     * @var string
+     */
+    private $plaats;
+
+    /**
+     * @var integer
+     */
+    private $id;
+
+
+    /**
+     * Set bedrijfId
+     *
+     * @param integer $bedrijfId
+     *
+     * @return Vestiging
+     */
+    public function setBedrijfId($bedrijfId)
+    {
+        $this->bedrijfId = $bedrijfId;
+
+        return $this;
+    }
+
+    /**
+     * Get bedrijfId
+     *
+     * @return integer
+     */
+    public function getBedrijfId()
+    {
+        return $this->bedrijfId;
+    }
+
+    /**
+     * Set adres
+     *
+     * @param string $adres
+     *
+     * @return Vestiging
+     */
+    public function setAdres($adres)
+    {
+        $this->adres = $adres;
+
+        return $this;
+    }
+
+    /**
+     * Get adres
+     *
+     * @return string
+     */
+    public function getAdres()
+    {
+        return $this->adres;
+    }
+
+    /**
+     * Set postcode
+     *
+     * @param string $postcode
+     *
+     * @return Vestiging
+     */
+    public function setPostcode($postcode)
+    {
+        $this->postcode = $postcode;
+
+        return $this;
+    }
+
+    /**
+     * Get postcode
+     *
+     * @return string
+     */
+    public function getPostcode()
+    {
+        return $this->postcode;
+    }
+
+    /**
+     * Set plaats
+     *
+     * @param string $plaats
+     *
+     * @return Vestiging
+     */
+    public function setPlaats($plaats)
+    {
+        $this->plaats = $plaats;
+
+        return $this;
+    }
+
+    /**
+     * Get plaats
+     *
+     * @return string
+     */
+    public function getPlaats()
+    {
+        return $this->plaats;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

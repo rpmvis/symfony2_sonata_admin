@@ -1,0 +1,139 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tfactuurregel
+ */
+class Tfactuurregel
+{
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     */
+    private $datum;
+
+    /**
+     * @var string
+     */
+    private $beschrijving;
+
+    /**
+     * @var string
+     */
+    private $prijs;
+
+    /**
+     * @var \AppBundle\Entity\Tfactuur
+     */
+    private $factuur;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set datum
+     *
+     * @param \DateTime $datum
+     * @return Tfactuurregel
+     */
+    public function setDatum($datum)
+    {
+        $this->datum = $datum;
+
+        return $this;
+    }
+
+    /**
+     * Get datum
+     *
+     * @return \DateTime 
+     */
+    public function getDatum()
+    {
+        return $this->datum;
+    }
+
+    /**
+     * Set beschrijving
+     *
+     * @param string $beschrijving
+     * @return Tfactuurregel
+     */
+    public function setBeschrijving($beschrijving)
+    {
+        $this->beschrijving = $beschrijving;
+
+        return $this;
+    }
+
+    /**
+     * Get beschrijving
+     *
+     * @return string 
+     */
+    public function getBeschrijving()
+    {
+        return $this->beschrijving;
+    }
+
+    /**
+     * Set prijs
+     *
+     * @param string $prijs
+     * @return Tfactuurregel
+     */
+    public function setPrijs($prijs)
+    {
+        $this->prijs = $prijs;
+
+        return $this;
+    }
+
+    /**
+     * Get prijs
+     *
+     * @return string 
+     */
+    public function getPrijs()
+    {
+        return $this->prijs;
+    }
+
+    /**
+     * Set factuur
+     *
+     * @param \AppBundle\Entity\Tfactuur $factuur
+     * @return Tfactuurregel
+     */
+    public function setFactuur(\AppBundle\Entity\Tfactuur $factuur = null)
+    {
+        $this->factuur = $factuur;
+
+        return $this;
+    }
+
+    /**
+     * Get factuur
+     *
+     * @return \AppBundle\Entity\Tfactuur 
+     */
+    public function getFactuur()
+    {
+        return $this->factuur;
+    }
+}

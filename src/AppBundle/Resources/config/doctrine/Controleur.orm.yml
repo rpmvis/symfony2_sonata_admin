@@ -1,0 +1,53 @@
+AppBundle\Entity\Controleur:
+    type: entity
+    table: Controleur
+    uniqueConstraints:
+        controleur_UNIQUE:
+            columns:
+                - Naam
+    id:
+        id:
+            type: bigint
+            nullable: false
+            unsigned: false
+            id: true
+            column: ID
+            generator:
+                strategy: IDENTITY
+    fields:
+        naam:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            column: Naam
+        adres:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            column: Adres
+        postcode:
+            type: string
+            nullable: true
+            length: 6
+            fixed: false
+            column: Postcode
+        plaats:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            column: Plaats
+        emailAdres:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            column: Email_adres
+        actief:
+            type: boolean
+            nullable: false
+            default: '1'
+            column: Actief
+    lifecycleCallbacks: {  }

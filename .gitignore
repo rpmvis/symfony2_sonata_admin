@@ -1,0 +1,53 @@
+# Cache and logs (Symfony2)
+/app/cache/*
+/app/logs/*
+!app/cache/.gitkeep
+!app/logs/.gitkeep
+
+# Email spool folder
+/app/spool/*
+
+# Parameters
+/app/config/parameters.yml
+/app/config/parameters.ini
+
+# Managed by Composer
+/app/bootstrap.php.cache
+/var/bootstrap.php.cache
+/bin/*
+!bin/console
+!bin/symfony_requirements
+/vendor/
+
+# Assets and user uploads
+/web/bundles/
+/web/uploads/
+
+# Assets managed by Bower
+/web/assets/vendor/
+
+# PHPUnit
+/app/phpunit.xml
+/phpunit.xml
+
+# Build data
+/build/
+
+# Composer PHAR
+/composer.phar
+
+# Backup entities generated with doctrine:generate:entities command
+*/Entity/*~
+
+#diverse
+.idea/*
+/src/AppBundle/Entity/Factuur*
+/src/AppBundle/Entity/Controleafspraakmetwerknemer.php
+/src/AppBundle/Entity/MigrationVersions.php
+/src/AppBundle/Resources/config/doctrine/Factuur*
+/src/AppBundle/Resources/config/doctrine/Controleafspraakmetwerknemer.orm.yml
+/src/AppBundle/Resources/config/doctrine/MigrationVersions.orm.yml
+/link*
+/play.php
+/UPGRADE*
+/test*

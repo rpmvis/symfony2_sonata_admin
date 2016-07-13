@@ -1,0 +1,85 @@
+AppBundle\Entity\Klant:
+    type: entity
+    table: Klant
+    id:
+        id:
+            type: bigint
+            nullable: false
+            unsigned: false
+            id: true
+            column: ID
+            generator:
+                strategy: IDENTITY
+    fields:
+        klantNaam:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            column: Klant_naam
+        bedrijfNaam:
+            type: string
+            nullable: false
+            length: 60
+            fixed: false
+            column: Bedrijf_naam
+        bedrijfAdres:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            column: Bedrijf_adres
+        bedrijfPostcode:
+            type: string
+            nullable: false
+            length: 6
+            fixed: false
+            column: Bedrijf_postcode
+        bedrijfPlaats:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            column: Bedrijf_plaats
+        bedrijfEmailAdres:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            column: Bedrijf_email_adres
+        priveAdres:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            column: Prive_adres
+        privePostcode:
+            type: string
+            nullable: true
+            length: 6
+            fixed: false
+            column: Prive_postcode
+        privePlaats:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            column: Prive_plaats
+        priveEmailAdres:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            column: Prive_email_adres
+        actief:
+            type: boolean
+            nullable: false
+            default: '1'
+            column: Actief
+    oneToMany:
+        werknemers:
+            targetEntity: AppBundle\Entity\Werknemer
+            mappedBy: klant
+            cascade: ["persist", "merge"]
+            orphanRemoval: true
+    lifecycleCallbacks: {  }

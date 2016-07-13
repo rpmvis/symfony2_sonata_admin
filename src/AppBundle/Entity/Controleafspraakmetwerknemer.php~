@@ -1,0 +1,170 @@
+<?php
+
+namespace AppBundle\Entity;
+
+/**
+ * Tcontroleafspraakmetwerknemer
+ */
+class Controleafspraakmetwerknemer
+{
+    /**
+     * @var \DateTime
+     */
+    private $datumHervattingWerk;
+
+    /**
+     * @var boolean
+     */
+    private $berichtAchtergelatenVoorUwMedewerker;
+
+    /**
+     * @var boolean
+     */
+    private $opdrachtgeverContactOpnemenMetWerknemer;
+
+    /**
+     * @var boolean
+     */
+    private $toestemmingBetrokkeneVoorRapportageAanOpdrachtgever;
+
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var \AppBundle\Entity\Controle
+     */
+    private $controle;
+
+
+    /**
+     * Set datumHervattingWerk
+     *
+     * @param \DateTime $datumHervattingWerk
+     *
+     * @return Tcontroleafspraakmetwerknemer
+     */
+    public function setDatumHervattingWerk($datumHervattingWerk)
+    {
+        $this->datumHervattingWerk = $datumHervattingWerk;
+
+        return $this;
+    }
+
+    /**
+     * Get datumHervattingWerk
+     *
+     * @return \DateTime
+     */
+    public function getDatumHervattingWerk()
+    {
+        return $this->datumHervattingWerk;
+    }
+
+    /**
+     * Set berichtAchtergelatenVoorUwMedewerker
+     *
+     * @param boolean $berichtAchtergelatenVoorUwMedewerker
+     *
+     * @return Tcontroleafspraakmetwerknemer
+     */
+    public function setBerichtAchtergelatenVoorUwMedewerker($berichtAchtergelatenVoorUwMedewerker)
+    {
+        $this->berichtAchtergelatenVoorUwMedewerker = $berichtAchtergelatenVoorUwMedewerker;
+
+        return $this;
+    }
+
+    /**
+     * Get berichtAchtergelatenVoorUwMedewerker
+     *
+     * @return boolean
+     */
+    public function getBerichtAchtergelatenVoorUwMedewerker()
+    {
+        return $this->berichtAchtergelatenVoorUwMedewerker;
+    }
+
+    /**
+     * Set opdrachtgeverContactOpnemenMetWerknemer
+     *
+     * @param boolean $opdrachtgeverContactOpnemenMetWerknemer
+     *
+     * @return Tcontroleafspraakmetwerknemer
+     */
+    public function setOpdrachtgeverContactOpnemenMetWerknemer($opdrachtgeverContactOpnemenMetWerknemer)
+    {
+        $this->opdrachtgeverContactOpnemenMetWerknemer = $opdrachtgeverContactOpnemenMetWerknemer;
+
+        return $this;
+    }
+
+    /**
+     * Get opdrachtgeverContactOpnemenMetWerknemer
+     *
+     * @return boolean
+     */
+    public function getOpdrachtgeverContactOpnemenMetWerknemer()
+    {
+        return $this->opdrachtgeverContactOpnemenMetWerknemer;
+    }
+
+    /**
+     * Set toestemmingBetrokkeneVoorRapportageAanOpdrachtgever
+     *
+     * @param boolean $toestemmingBetrokkeneVoorRapportageAanOpdrachtgever
+     *
+     * @return Tcontroleafspraakmetwerknemer
+     */
+    public function setToestemmingBetrokkeneVoorRapportageAanOpdrachtgever($toestemmingBetrokkeneVoorRapportageAanOpdrachtgever)
+    {
+        $this->toestemmingBetrokkeneVoorRapportageAanOpdrachtgever = $toestemmingBetrokkeneVoorRapportageAanOpdrachtgever;
+
+        return $this;
+    }
+
+    /**
+     * Get toestemmingBetrokkeneVoorRapportageAanOpdrachtgever
+     *
+     * @return boolean
+     */
+    public function getToestemmingBetrokkeneVoorRapportageAanOpdrachtgever()
+    {
+        return $this->toestemmingBetrokkeneVoorRapportageAanOpdrachtgever;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set controle
+     *
+     * @param \AppBundle\Entity\Controle $controle
+     *
+     * @return Tcontroleafspraakmetwerknemer
+     */
+    public function setControle(\AppBundle\Entity\Controle $controle = null)
+    {
+        $this->controle = $controle;
+
+        return $this;
+    }
+
+    /**
+     * Get controle
+     *
+     * @return \AppBundle\Entity\Controle
+     */
+    public function getControle()
+    {
+        return $this->controle;
+    }
+}

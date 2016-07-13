@@ -1,0 +1,41 @@
+AppBundle\Entity\Controleverzoektype:
+    type: entity
+    table: Controleverzoektype
+    id:
+        id:
+            type: bigint
+            nullable: false
+            unsigned: false
+            id: true
+            column: ID
+            generator:
+                strategy: IDENTITY
+    fields:
+        controleverzoektypeCode:
+            type: string
+            nullable: false
+            length: 10
+            fixed: false
+            column: Controleverzoektype_code
+        controleverzoektype:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            column: Controleverzoektype
+        standaardPrijs:
+            type: decimal
+            nullable: true
+            precision: 8
+            scale: 2
+            column: Standaard_prijs
+        actief:
+            type: boolean
+            nullable: false
+            column: Actief
+        volgorde:
+            type: integer
+            nullable: true
+            unsigned: false
+            column: Volgorde
+    lifecycleCallbacks: {  }

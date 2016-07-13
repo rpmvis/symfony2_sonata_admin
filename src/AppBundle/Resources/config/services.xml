@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <!--
+    <services>
+        <service id="r_vis_demo.example" class="RVis\DemoBundle\Example">
+            <argument type="service" id="service_id" />
+            <argument>plain_value</argument>
+            <argument>%parameter_name%</argument>
+        </service>
+    </services>
+    -->
+
+    <services>
+        <service id="appbundle.block.breadcrumb" class="AppBundle\Block\MyCustomBreadcrumbBlockService">
+            <tag name="sonata.block"/>
+            <tag name="sonata.breadcrumb"/>
+
+            <argument>my_custom_context</argument>
+            <argument>appbundle.block.breadcrumb</argument>
+            <argument type="service" id="templating" />
+            <argument type="service" id="knp_menu.menu_provider" />
+            <argument type="service" id="knp_menu.factory" />
+        </service>
+    </services>
+</container>

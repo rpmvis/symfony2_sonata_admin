@@ -1,0 +1,60 @@
+AppBundle\Entity\Controleverzoek:
+    type: entity
+    table: Controleverzoek
+    indexes:
+        Werknemer_ID:
+            columns:
+                - Werknemer_ID
+        Opdracht_ID:
+            columns:
+                - Opdracht_ID
+        IDX_Controleverzoek_Controleverzoektype:
+            columns:
+                - Controleverzoektype_ID
+    uniqueConstraints:
+        Verzoek_Tijdstip_verzoek:
+            columns:
+                - Tijdstip_verzoek
+    id:
+        id:
+            type: bigint
+            nullable: false
+            unsigned: false
+            id: true
+            column: ID
+            generator:
+                strategy: IDENTITY
+    fields:
+        tijdstipVerzoek:
+            type: datetime
+            nullable: false
+            column: Tijdstip_verzoek
+    manyToOne:
+        opdracht:
+            targetEntity: Opdracht
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                Opdracht_ID:
+                    referencedColumnName: ID
+            orphanRemoval: false
+        werknemer:
+            targetEntity: Werknemer
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                Werknemer_ID:
+                    referencedColumnName: ID
+            orphanRemoval: false
+        controleverzoektype:
+            targetEntity: Controleverzoektype
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                Controleverzoektype_ID:
+                    referencedColumnName: ID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

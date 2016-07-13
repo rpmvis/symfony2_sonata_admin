@@ -1,0 +1,58 @@
+services:
+#    app.example:
+#        class: AppBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+services:
+#    validator.ContainsAlphanumeric:
+#        class: AppBundle\Validator\Constraints\ContainsAlphanumeric
+#        tags:
+#            - { name: validator.constraint_validator, alias: ContainsAlphanumeric }
+
+    app.controleverzoek:
+        class: AppBundle\Admin\ControleverzoekAdmin
+        arguments: [~, AppBundle\Entity\Controleverzoek, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Controleverzoek}
+
+    app.controle:
+        class: AppBundle\Admin\ControleAdmin
+        arguments: [~, AppBundle\Entity\Controle, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Controle}
+
+    app.controlegespreksverslag:
+        class: AppBundle\Admin\ControlegespreksverslagAdmin
+        arguments: [~, AppBundle\Entity\Controlegespreksverslag, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Controlegespreksverslag}
+
+    app.opdracht:
+        class: AppBundle\Admin\OpdrachtAdmin
+        arguments: [~, AppBundle\Entity\Opdracht, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Opdracht}
+
+    app.controleur:
+        class: AppBundle\Admin\ControleurAdmin
+        arguments: [~, AppBundle\Entity\Controleur , SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: stamdata, label: Controleur}
+
+    app.controleverzoektype:
+        class: AppBundle\Admin\ControleverzoektypeAdmin
+        arguments: [~, AppBundle\Entity\Controleverzoektype, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: stamdata, label: Controleverzoektype}
+
+    app.werknemer:
+        class: AppBundle\Admin\WerknemerAdmin
+        arguments: [~, AppBundle\Entity\Werknemer, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: stamdata, label: Werknemer}
+
+    app.klant:
+        class: AppBundle\Admin\KlantAdmin
+        arguments: [~, AppBundle\Entity\Klant, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: stamdata, label: Klant}
+

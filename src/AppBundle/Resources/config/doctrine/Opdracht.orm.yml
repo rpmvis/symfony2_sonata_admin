@@ -1,0 +1,40 @@
+AppBundle\Entity\Opdracht:
+    type: entity
+    table: Opdracht
+    indexes:
+        Klant_ID:
+            columns:
+                - Klant_ID
+    id:
+        id:
+            type: bigint
+            nullable: false
+            unsigned: false
+            id: true
+            column: ID
+            generator:
+                strategy: IDENTITY
+    fields:
+        opdrachtDatum:
+            type: datetime
+            nullable: false
+            column: Opdracht_datum
+        akkoordMetAlgemeneVoorwaarden:
+            type: boolean
+            nullable: false
+            column: Akkoord_met_algemene_voorwaarden
+        akkoordVoorOpdracht:
+            type: boolean
+            nullable: false
+            column: Akkoord_voor_opdracht
+    manyToOne:
+        klant:
+            targetEntity: Klant
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                Klant_ID:
+                    referencedColumnName: ID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

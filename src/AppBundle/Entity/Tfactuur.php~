@@ -1,0 +1,83 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tfactuur
+ */
+class Tfactuur
+{
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     */
+    private $factuurDatum;
+
+    /**
+     * @var string
+     */
+    private $factuurNr;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set factuurDatum
+     *
+     * @param \DateTime $factuurDatum
+     * @return Tfactuur
+     */
+    public function setFactuurDatum($factuurDatum)
+    {
+        $this->factuurDatum = $factuurDatum;
+
+        return $this;
+    }
+
+    /**
+     * Get factuurDatum
+     *
+     * @return \DateTime 
+     */
+    public function getFactuurDatum()
+    {
+        return $this->factuurDatum;
+    }
+
+    /**
+     * Set factuurNr
+     *
+     * @param string $factuurNr
+     * @return Tfactuur
+     */
+    public function setFactuurNr($factuurNr)
+    {
+        $this->factuurNr = $factuurNr;
+
+        return $this;
+    }
+
+    /**
+     * Get factuurNr
+     *
+     * @return string 
+     */
+    public function getFactuurNr()
+    {
+        return $this->factuurNr;
+    }
+}

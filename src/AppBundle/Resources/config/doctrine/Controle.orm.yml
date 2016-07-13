@@ -1,0 +1,59 @@
+AppBundle\Entity\Controle:
+    type: entity
+    table: Controle
+    indexes:
+        Controleverzoek_ID:
+            columns:
+                - Controleverzoek_ID
+        Controleur_ID:
+            columns:
+                - Controleur_ID
+    uniqueConstraints:
+        Controle_UNIQUE:
+            columns:
+                - Controleverzoek_ID
+                - Tijdstip_bezoek
+    id:
+        id:
+            type: bigint
+            nullable: false
+            unsigned: false
+            id: true
+            column: ID
+            generator:
+                strategy: IDENTITY
+    fields:
+        tijdstipBezoek:
+            type: datetime
+            nullable: false
+            column: Tijdstip_bezoek
+        opmerkingen:
+            type: string
+            nullable: true
+            length: 1000
+            fixed: false
+            column: Opmerkingen
+        facturabel:
+            type: boolean
+            nullable: false
+            column: Facturabel
+    manyToOne:
+        controleverzoek:
+            targetEntity: Controleverzoek
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                Controleverzoek_ID:
+                    referencedColumnName: ID
+            orphanRemoval: false
+        controleur:
+            targetEntity: Controleur
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                Controleur_ID:
+                    referencedColumnName: ID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,83 @@
+<?php
+
+namespace AppBundle\Entity;
+
+/**
+ * Todo
+ */
+class Todo
+{
+    /**
+     * @var string
+     */
+    private $todo;
+
+    /**
+     * @var \DateTime
+     */
+    private $datumGedaan;
+
+    /**
+     * @var integer
+     */
+    private $id;
+
+
+    /**
+     * Set todo
+     *
+     * @param string $todo
+     *
+     * @return Ttodo
+     */
+    public function setTodo($todo)
+    {
+        $this->todo = $todo;
+
+        return $this;
+    }
+
+    /**
+     * Get todo
+     *
+     * @return string
+     */
+    public function getTodo()
+    {
+        return $this->todo;
+    }
+
+    /**
+     * Set datumGedaan
+     *
+     * @param \DateTime $datumGedaan
+     *
+     * @return Ttodo
+     */
+    public function setDatumGedaan($datumGedaan)
+    {
+        $this->datumGedaan = $datumGedaan;
+
+        return $this;
+    }
+
+    /**
+     * Get datumGedaan
+     *
+     * @return \DateTime
+     */
+    public function getDatumGedaan()
+    {
+        return $this->datumGedaan;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

@@ -1,0 +1,279 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Twerkn
+ */
+class Twerkn
+{
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var string
+     */
+    private $naam;
+
+    /**
+     * @var string
+     */
+    private $huisAdres;
+
+    /**
+     * @var string
+     */
+    private $huisPostcode;
+
+    /**
+     * @var string
+     */
+    private $huisPlaats;
+
+    /**
+     * @var boolean
+     */
+    private $huisAdresIsBezoekAdres;
+
+    /**
+     * @var string
+     */
+    private $bezoekAdres;
+
+    /**
+     * @var string
+     */
+    private $bezoekPostcode;
+
+    /**
+     * @var string
+     */
+    private $bezoekPlaats;
+
+    /**
+     * @var \AppBundle\Entity\Tklant
+     */
+    private $klant;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set naam
+     *
+     * @param string $naam
+     * @return Twerkn
+     */
+    public function setNaam($naam)
+    {
+        $this->naam = $naam;
+
+        return $this;
+    }
+
+    /**
+     * Get naam
+     *
+     * @return string 
+     */
+    public function getNaam()
+    {
+        return $this->naam;
+    }
+
+    /**
+     * Set huisAdres
+     *
+     * @param string $huisAdres
+     * @return Twerkn
+     */
+    public function setHuisAdres($huisAdres)
+    {
+        $this->huisAdres = $huisAdres;
+
+        return $this;
+    }
+
+    /**
+     * Get huisAdres
+     *
+     * @return string 
+     */
+    public function getHuisAdres()
+    {
+        return $this->huisAdres;
+    }
+
+    /**
+     * Set huisPostcode
+     *
+     * @param string $huisPostcode
+     * @return Twerkn
+     */
+    public function setHuisPostcode($huisPostcode)
+    {
+        $this->huisPostcode = $huisPostcode;
+
+        return $this;
+    }
+
+    /**
+     * Get huisPostcode
+     *
+     * @return string 
+     */
+    public function getHuisPostcode()
+    {
+        return $this->huisPostcode;
+    }
+
+    /**
+     * Set huisPlaats
+     *
+     * @param string $huisPlaats
+     * @return Twerkn
+     */
+    public function setHuisPlaats($huisPlaats)
+    {
+        $this->huisPlaats = $huisPlaats;
+
+        return $this;
+    }
+
+    /**
+     * Get huisPlaats
+     *
+     * @return string 
+     */
+    public function getHuisPlaats()
+    {
+        return $this->huisPlaats;
+    }
+
+    /**
+     * Set huisAdresIsBezoekAdres
+     *
+     * @param boolean $huisAdresIsBezoekAdres
+     * @return Twerkn
+     */
+    public function setHuisAdresIsBezoekAdres($huisAdresIsBezoekAdres)
+    {
+        $this->huisAdresIsBezoekAdres = $huisAdresIsBezoekAdres;
+
+        return $this;
+    }
+
+    /**
+     * Get huisAdresIsBezoekAdres
+     *
+     * @return boolean 
+     */
+    public function getHuisAdresIsBezoekAdres()
+    {
+        return $this->huisAdresIsBezoekAdres;
+    }
+
+    /**
+     * Set bezoekAdres
+     *
+     * @param string $bezoekAdres
+     * @return Twerkn
+     */
+    public function setBezoekAdres($bezoekAdres)
+    {
+        $this->bezoekAdres = $bezoekAdres;
+
+        return $this;
+    }
+
+    /**
+     * Get bezoekAdres
+     *
+     * @return string 
+     */
+    public function getBezoekAdres()
+    {
+        return $this->bezoekAdres;
+    }
+
+    /**
+     * Set bezoekPostcode
+     *
+     * @param string $bezoekPostcode
+     * @return Twerkn
+     */
+    public function setBezoekPostcode($bezoekPostcode)
+    {
+        $this->bezoekPostcode = $bezoekPostcode;
+
+        return $this;
+    }
+
+    /**
+     * Get bezoekPostcode
+     *
+     * @return string 
+     */
+    public function getBezoekPostcode()
+    {
+        return $this->bezoekPostcode;
+    }
+
+    /**
+     * Set bezoekPlaats
+     *
+     * @param string $bezoekPlaats
+     * @return Twerkn
+     */
+    public function setBezoekPlaats($bezoekPlaats)
+    {
+        $this->bezoekPlaats = $bezoekPlaats;
+
+        return $this;
+    }
+
+    /**
+     * Get bezoekPlaats
+     *
+     * @return string 
+     */
+    public function getBezoekPlaats()
+    {
+        return $this->bezoekPlaats;
+    }
+
+    /**
+     * Set klant
+     *
+     * @param \AppBundle\Entity\Tklant $klant
+     * @return Twerkn
+     */
+    public function setKlant(\AppBundle\Entity\Tklant $klant = null)
+    {
+        $this->klant = $klant;
+
+        return $this;
+    }
+
+    /**
+     * Get klant
+     *
+     * @return \AppBundle\Entity\Tklant 
+     */
+    public function getKlant()
+    {
+        return $this->klant;
+    }
+}

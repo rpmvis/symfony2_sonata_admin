@@ -1,0 +1,48 @@
+AppBundle\Entity\Controleaanwezigheid:
+    type: entity
+    table: Controleaanwezigheid
+    uniqueConstraints:
+        Controle_ID:
+            columns:
+                - Controle_ID
+    id:
+        id:
+            type: bigint
+            nullable: false
+            unsigned: false
+            id: true
+            column: ID
+            generator:
+                strategy: IDENTITY
+    fields:
+        betrokkeneIsThuis:
+            type: boolean
+            nullable: false
+            column: Betrokkene_is_thuis
+        belHoorbaar:
+            type: boolean
+            nullable: false
+            column: Bel_hoorbaar
+        gesprokenMetEenDerdeRelatieVanDerdeMetBetrokkene:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            column: Gesproken_met_een_derde___relatie_van_derde_met_betrokkene
+        redenVoorAfwezigheid:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            column: Reden_voor_afwezigheid
+    manyToOne:
+        controle:
+            targetEntity: Controle
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                Controle_ID:
+                    referencedColumnName: ID
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

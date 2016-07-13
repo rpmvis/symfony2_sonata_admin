@@ -1,0 +1,14 @@
+# src/AppBundle/Resources/config/validation.yml
+AppBundle\Entity\Controle:
+    properties:
+        opmerkingen:
+            - AppBundle\Validator\Constraints\ContainsAlphanumeric: ~
+
+AppBundle\Entity\Klant:
+    properties:
+        bedrijfPostcode:
+            - AppBundle\Validator\Constraints\Postcode: ~
+        bedrijfEmailAdres:
+            - AppBundle\Validator\Constraints\CustomEmail: ~
+        priveEmailAdres:
+            - AppBundle\Validator\Constraints\CustomEmail: ~

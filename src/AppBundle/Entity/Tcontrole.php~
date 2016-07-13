@@ -1,0 +1,228 @@
+<?php
+
+namespace AppBundle\Entity;
+
+/**
+ * Tcontrole
+ */
+class Tcontrole
+{
+    /**
+     * @var integer
+     */
+    private $controleurId;
+
+    /**
+     * @var \DateTime
+     */
+    private $datumBezoek;
+
+    /**
+     * @var string
+     */
+    private $tijdstipBezoek;
+
+    /**
+     * @var string
+     */
+    private $opmerkingen;
+
+    /**
+     * @var boolean
+     */
+    private $facturabel;
+
+    /**
+     * @var integer
+     */
+    private $tcontroleurid;
+
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var \AppBundle\Entity\Controleverzoek
+     */
+    private $controleverzoek;
+
+
+    /**
+     * Set controleurId
+     *
+     * @param integer $controleurId
+     *
+     * @return Tcontrole
+     */
+    public function setControleurId($controleurId)
+    {
+        $this->controleurId = $controleurId;
+
+        return $this;
+    }
+
+    /**
+     * Get controleurId
+     *
+     * @return integer
+     */
+    public function getControleurId()
+    {
+        return $this->controleurId;
+    }
+
+    /**
+     * Set datumBezoek
+     *
+     * @param \DateTime $datumBezoek
+     *
+     * @return Tcontrole
+     */
+    public function setDatumBezoek($datumBezoek)
+    {
+        $this->datumBezoek = $datumBezoek;
+
+        return $this;
+    }
+
+    /**
+     * Get datumBezoek
+     *
+     * @return \DateTime
+     */
+    public function getDatumBezoek()
+    {
+        return $this->datumBezoek;
+    }
+
+    /**
+     * Set tijdstipBezoek
+     *
+     * @param string $tijdstipBezoek
+     *
+     * @return Tcontrole
+     */
+    public function setTijdstipBezoek($tijdstipBezoek)
+    {
+        $this->tijdstipBezoek = $tijdstipBezoek;
+
+        return $this;
+    }
+
+    /**
+     * Get tijdstipBezoek
+     *
+     * @return string
+     */
+    public function getTijdstipBezoek()
+    {
+        return $this->tijdstipBezoek;
+    }
+
+    /**
+     * Set opmerkingen
+     *
+     * @param string $opmerkingen
+     *
+     * @return Tcontrole
+     */
+    public function setOpmerkingen($opmerkingen)
+    {
+        $this->opmerkingen = $opmerkingen;
+
+        return $this;
+    }
+
+    /**
+     * Get opmerkingen
+     *
+     * @return string
+     */
+    public function getOpmerkingen()
+    {
+        return $this->opmerkingen;
+    }
+
+    /**
+     * Set facturabel
+     *
+     * @param boolean $facturabel
+     *
+     * @return Tcontrole
+     */
+    public function setFacturabel($facturabel)
+    {
+        $this->facturabel = $facturabel;
+
+        return $this;
+    }
+
+    /**
+     * Get facturabel
+     *
+     * @return boolean
+     */
+    public function getFacturabel()
+    {
+        return $this->facturabel;
+    }
+
+    /**
+     * Set tcontroleurid
+     *
+     * @param integer $tcontroleurid
+     *
+     * @return Tcontrole
+     */
+    public function setTcontroleurid($tcontroleurid)
+    {
+        $this->tcontroleurid = $tcontroleurid;
+
+        return $this;
+    }
+
+    /**
+     * Get tcontroleurid
+     *
+     * @return integer
+     */
+    public function getTcontroleurid()
+    {
+        return $this->tcontroleurid;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set controleverzoek
+     *
+     * @param \AppBundle\Entity\Controleverzoek $controleverzoek
+     *
+     * @return Tcontrole
+     */
+    public function setControleverzoek(\AppBundle\Entity\Controleverzoek $controleverzoek = null)
+    {
+        $this->controleverzoek = $controleverzoek;
+
+        return $this;
+    }
+
+    /**
+     * Get controleverzoek
+     *
+     * @return \AppBundle\Entity\Controleverzoek
+     */
+    public function getControleverzoek()
+    {
+        return $this->controleverzoek;
+    }
+}

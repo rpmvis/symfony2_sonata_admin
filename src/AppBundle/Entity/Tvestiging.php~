@@ -1,0 +1,139 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tvestiging
+ */
+class Tvestiging
+{
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var integer
+     */
+    private $bedrijfId;
+
+    /**
+     * @var string
+     */
+    private $adres;
+
+    /**
+     * @var string
+     */
+    private $postcode;
+
+    /**
+     * @var string
+     */
+    private $plaats;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set bedrijfId
+     *
+     * @param integer $bedrijfId
+     * @return Tvestiging
+     */
+    public function setBedrijfId($bedrijfId)
+    {
+        $this->bedrijfId = $bedrijfId;
+
+        return $this;
+    }
+
+    /**
+     * Get bedrijfId
+     *
+     * @return integer 
+     */
+    public function getBedrijfId()
+    {
+        return $this->bedrijfId;
+    }
+
+    /**
+     * Set adres
+     *
+     * @param string $adres
+     * @return Tvestiging
+     */
+    public function setAdres($adres)
+    {
+        $this->adres = $adres;
+
+        return $this;
+    }
+
+    /**
+     * Get adres
+     *
+     * @return string 
+     */
+    public function getAdres()
+    {
+        return $this->adres;
+    }
+
+    /**
+     * Set postcode
+     *
+     * @param string $postcode
+     * @return Tvestiging
+     */
+    public function setPostcode($postcode)
+    {
+        $this->postcode = $postcode;
+
+        return $this;
+    }
+
+    /**
+     * Get postcode
+     *
+     * @return string 
+     */
+    public function getPostcode()
+    {
+        return $this->postcode;
+    }
+
+    /**
+     * Set plaats
+     *
+     * @param string $plaats
+     * @return Tvestiging
+     */
+    public function setPlaats($plaats)
+    {
+        $this->plaats = $plaats;
+
+        return $this;
+    }
+
+    /**
+     * Get plaats
+     *
+     * @return string 
+     */
+    public function getPlaats()
+    {
+        return $this->plaats;
+    }
+}

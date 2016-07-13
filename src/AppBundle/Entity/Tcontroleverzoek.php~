@@ -1,0 +1,111 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tcontroleverzoek
+ */
+class Tcontroleverzoek
+{
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var string
+     */
+    private $controleverzoekCode;
+
+    /**
+     * @var \AppBundle\Entity\Topdracht
+     */
+    private $opdracht;
+
+    /**
+     * @var \AppBundle\Entity\Werknemer
+     */
+    private $werknemer;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set controleverzoekCode
+     *
+     * @param string $controleverzoekCode
+     * @return Tcontroleverzoek
+     */
+    public function setControleverzoekCode($controleverzoekCode)
+    {
+        $this->controleverzoekCode = $controleverzoekCode;
+
+        return $this;
+    }
+
+    /**
+     * Get controleverzoekCode
+     *
+     * @return string 
+     */
+    public function getControleverzoekCode()
+    {
+        return $this->controleverzoekCode;
+    }
+
+    /**
+     * Set opdracht
+     *
+     * @param \AppBundle\Entity\Topdracht $opdracht
+     * @return Tcontroleverzoek
+     */
+    public function setOpdracht(\AppBundle\Entity\Topdracht $opdracht = null)
+    {
+        $this->opdracht = $opdracht;
+
+        return $this;
+    }
+
+    /**
+     * Get opdracht
+     *
+     * @return \AppBundle\Entity\Topdracht 
+     */
+    public function getOpdracht()
+    {
+        return $this->opdracht;
+    }
+
+    /**
+     * Set werknemer
+     *
+     * @param \AppBundle\Entity\Werknemer $werknemer
+     * @return Tcontroleverzoek
+     */
+    public function setWerknemer(\AppBundle\Entity\Werknemer $werknemer = null)
+    {
+        $this->werknemer = $werknemer;
+
+        return $this;
+    }
+
+    /**
+     * Get werknemer
+     *
+     * @return \AppBundle\Entity\Werknemer 
+     */
+    public function getWerknemer()
+    {
+        return $this->werknemer;
+    }
+}
